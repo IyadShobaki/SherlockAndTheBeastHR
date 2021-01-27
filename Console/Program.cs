@@ -22,13 +22,17 @@ namespace ConsoleUI
         public static void DecentNumber(int n)
         {
             int fivesNumber = 0;
-            for (int i = 1; i <= n; i++)
+            int i = n;
+            while (i > 0)
             {
                 if (i % 3 == 0)
                 {
                     fivesNumber = i;
+                    break;
                 }
+                i--;
             }
+           
             int threesNumber = n - fivesNumber;
             while (threesNumber % 5 != 0 && fivesNumber > 0)
             {
